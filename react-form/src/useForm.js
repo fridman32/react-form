@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import validateInfo from "./validateInfo";
+//import './Form.css'
 
 const useForm = (callback, validateInfo) => {
     const [values, setValues] = useState({
@@ -32,7 +33,9 @@ const useForm = (callback, validateInfo) => {
         if (Object.keys(errors).length === 0 && isSubmitting) {
             callback();
         }
-    }, [errors])
+    },
+        [errors]
+    );
 
     return { handleChange, values, handleSubmit, errors };
 };
