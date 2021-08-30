@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import validateInfo from "./validateInfo";
-//import './Form.css'
+import './Form.css'
 
 const useForm = (callback, validateInfo) => {
     const [values, setValues] = useState({
